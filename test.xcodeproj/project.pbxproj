@@ -12,6 +12,7 @@
 		0C209C9F2ACEB25B00B190AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C209C9E2ACEB25B00B190AB /* ContentView.swift */; };
 		0C209CA12ACEB25C00B190AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C209CA02ACEB25C00B190AB /* Assets.xcassets */; };
 		0C209CA42ACEB25C00B190AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C209CA32ACEB25C00B190AB /* Preview Assets.xcassets */; };
+		908497932AD7DFD3006476E2 /* ContentsBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908497922AD7DFD3006476E2 /* ContentsBaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		0C209C9E2ACEB25B00B190AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0C209CA02ACEB25C00B190AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C209CA32ACEB25C00B190AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		908497922AD7DFD3006476E2 /* ContentsBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsBaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				0C209C9C2ACEB25B00B190AB /* testApp.swift */,
 				0C209C9E2ACEB25B00B190AB /* ContentView.swift */,
+				908497922AD7DFD3006476E2 /* ContentsBaseView.swift */,
 				0C209CA02ACEB25C00B190AB /* Assets.xcassets */,
 				0C209CA22ACEB25C00B190AB /* Preview Content */,
 			);
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C209C9F2ACEB25B00B190AB /* ContentView.swift in Sources */,
+				908497932AD7DFD3006476E2 /* ContentsBaseView.swift in Sources */,
 				0C1318182AD695660085CA02 /* CardView.swift in Sources */,
 				0C209C9D2ACEB25B00B190AB /* testApp.swift in Sources */,
 			);
