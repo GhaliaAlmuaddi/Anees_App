@@ -8,8 +8,31 @@
 import SwiftUI
 
 struct CardView: View {
+    
+    var image = ""
+    var description = "text"
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Color("Beige")
+            VStack{
+                Image(image)
+                    .resizable()
+                    .padding()
+                
+                HStack{
+                    Text(description)
+                        .foregroundColor(.black)
+                        .multilineTextAlignment(.trailing)
+                        .padding(8)
+                }
+                    .frame(width: 161, height: 100).background(Color.white)
+                    
+            }
+            
+        }.frame(width: 161 , height: 262)
+            .cornerRadius(19)
+            .padding(10)
     }
 }
 
