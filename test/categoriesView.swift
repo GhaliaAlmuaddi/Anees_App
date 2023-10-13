@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct categoriesView: View {
+   var mood : String
     struct Card
     {
         let imageName: String
         let title: String
+        
     }
     private let adaptiveColumns =
     [
@@ -42,9 +44,9 @@ struct categoriesView: View {
                         {
                             index in
                             let card = Card(imageName: "\(index + 1)",
-                            title: titles[index] )
+                                            title: titles[index] )
                             CardViewA(card: card)
-                        }//end foreach
+                        } //end foreach
                          
                     }//laze grid
                 }//VStack
@@ -56,54 +58,54 @@ struct categoriesView: View {
 }//struct
 
 struct CardViewA: View {
+    
     let card: categoriesView.Card
     
     var body: some View {
-        Button(action: {
-                   
-        print("Card \(card.title) tapped")})
+        Button( action: {
+            print("Card \(card.title) tapped")})
         {
+            
+            //NavigationLink(destination: Recommendation())
+            //                Button {
+            //                    print("Card \(card.title) tapped"); label: do { NavigationLink( destination: Recommendation() ) } }
+            
             ZStack{
                 Rectangle()
                     .frame(width:170, height: 300)
                     .foregroundColor(Color(red: 0.3411764801, green: 0.4627451003, blue: 0.6352941394, opacity:1))
                     .cornerRadius(19)
-                    
+                
                 VStack
                 {
                     if card.title == "مشروبات" {
                         Image(card.imageName)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                           // .frame(width: 71, height:132)
-                        
-                  }
+                        // .frame(width: 71, height:132)
+                    }
                     else {
-                            Image(card.imageName)
+                        Image(card.imageName)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                          //  .frame(width: 120)
-                            
-                                   }
-                        Text(card.title)
+                        //  .frame(width: 120)
+                        
+                    }
+                    Text(card.title)
                         .font(.title)
                         .foregroundColor(Color(red: 0.949, green: 0.898, blue: 0.835))
-                        
-                   
-                        
                     
-                  
-                        
-                        
-                }//Vstack
+                    
+                    
+                } //Vstack
             }//Zstack
-        }
-        
-    }//body
-}//struct
-
-
+            
+            
+        }//body
+    }//struct
+    
+}
 #Preview {
-    categoriesView()
+    categoriesView(mood: "")
 }
 

@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct ContentsBaseView: View {
+    
     var Content_title : String
     var Content_description : String
     var Content_image : String
     var Content_link : String
     var feeling_type : String
     var Category : String
+
+    
+    
     var body: some View {
         VStack{
            /* NavigationView{
