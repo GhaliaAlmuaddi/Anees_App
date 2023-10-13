@@ -45,7 +45,7 @@ struct categoriesView: View {
                             index in
                             let card = Card(imageName: "\(index + 1)",
                                             title: titles[index] )
-                            CardViewA(card: card)
+                            CardViewA(selectedMood: mood, card: card)
                         } //end foreach
                          
                     }//laze grid
@@ -59,18 +59,19 @@ struct categoriesView: View {
 
 struct CardViewA: View {
     
+    var selectedMood : String
+    
     let card: categoriesView.Card
     
     var body: some View {
-        Button( action: {
-            print("Card \(card.title) tapped")})
-        {
+        
+//        Button( action: {
+//            print("Card \(card.title) tapped , selected mood \(selectedMood)" )})
+        
             
-            //NavigationLink(destination: Recommendation())
-            //                Button {
-            //                    print("Card \(card.title) tapped"); label: do { NavigationLink( destination: Recommendation() ) } }
-            
-            ZStack{
+            NavigationLink(destination: Recommendation(selectedFeeling: selectedMood, selectedCatrgory: card.title ), label:{
+                
+                ZStack{
                 Rectangle()
                     .frame(width:170, height: 300)
                     .foregroundColor(Color(red: 0.3411764801, green: 0.4627451003, blue: 0.6352941394, opacity:1))
@@ -78,34 +79,32 @@ struct CardViewA: View {
                 
                 VStack
                 {
-                    if card.title == "مشروبات" {
-                        Image(card.imageName)
+                    
+                    Image(card.imageName)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                         // .frame(width: 71, height:132)
-                    }
-                    else {
-                        Image(card.imageName)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                        //  .frame(width: 120)
-                        
-                    }
+
                     Text(card.title)
                         .font(.title)
                         .foregroundColor(Color(red: 0.949, green: 0.898, blue: 0.835))
-                    
-                    
+           
                     
                 } //Vstack
-            }//Zstack
+            }//Zstack } )
+
             
-            
-        }//body
-    }//struct
-    
+        }//navigation
+    )}//body
 }
+                           
 #Preview {
     categoriesView(mood: "")
 }
 
+                           
+                           
+                           //
+                           //            NavigationLink(<#LocalizedStringKey#>, destination: Recommendation())
+                           //                            Button {
+                           //                                print("Card \(card.title) tapped"); label: do { NavigationLink( destination: Recommendation() ) } }

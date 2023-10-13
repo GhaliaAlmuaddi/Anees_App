@@ -9,17 +9,22 @@ import SwiftUI
 
 struct Recommendation: View {
     var contents : [ContentsBaseView] = []
+    
     var obj1 : ContentsBaseView = ContentsBaseView(Content_title: "بودكاست تنفس - كنبة السبت", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "Worry" , Category : "Audio")
     //contents.append(obj1)
     
+    var selectedFeeling : String
+    var selectedCatrgory : String
+    
     var body: some View {
+        
         Text("")
        
         
         //       static var obj1 = ContentsBaseView(Content_title: "بودكاست تنفس - كنبة السبت", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "Worry" , Category : "Audio")
         
         
-        /* VStack{
+         VStack{
          /* NavigationView{
           Text("")
           .toolbar{
@@ -28,7 +33,7 @@ struct Recommendation: View {
           .multilineTextAlignment(.center)
           }} */
          ZStack{
-         Rectangle().fill( .blueOne).frame(width: 500, height:500).position(x:150,y:130)
+         Rectangle().fill( Color("BlueOne")).frame(width: 500, height:500).position(x:150,y:130)
          Image("كنبة السبت").resizable().frame(width: 305.78 , height:293 ).cornerRadius(30).shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/).position(x: 180, y: 255)
          }.padding() //End of Zstack
          VStack{
@@ -36,17 +41,18 @@ struct Recommendation: View {
          Text("نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس").multilineTextAlignment(.trailing).padding(20)
          }.offset(x:10 , y:-76)
          Button(action: {
+             print(" selected feeling \(selectedFeeling) , selected catorgy \(selectedCatrgory)")
          /*   Link(Destination: URL(string: "https://www.apple.com")!
           )  */ }, label: {
          
          Text( "للاستماع").frame(width : 95, height :90 ,alignment: .center).background(.red).offset(y:-50).cornerRadius(8)
          })
          } //End of big Vstack
-         */
+         
     } }
  
 
 
 #Preview {
-    Recommendation()
+    Recommendation(selectedFeeling: "", selectedCatrgory: "")
 }
