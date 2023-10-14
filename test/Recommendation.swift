@@ -8,15 +8,33 @@
 import SwiftUI
 
 struct Recommendation: View {
-  
+    
     //contents.append(obj1)
     
     var selectedFeeling : String
     var selectedCatrgory : String
+    
     var body: some View {
-       
         
-        Text("")
+        
+        let Conttents_array = [Contents(Content_title: "بودكاست تنفس - كنبة السبت", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "صوتيات"),Contents(Content_title: "بودكاست تنفس - كنبة السبت", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "صوتيات"),Contents(Content_title: "بودكاست تنفس - كنبة السبت", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "صوتيات")]
+        
+//        ForEach(0..<Conttents_array.count , id: \.self) { index in
+//            if(Conttents_array[index].Category==selectedCatrgory && Conttents_array[index].feeling_type==selectedFeeling){
+//                ContentsBaseView(Content_title: Conttents_array[index].Content_title, Content_description: Conttents_array[index].Content_description, Content_image: Conttents_array[index].Content_image, Content_link: Conttents_array[index].Content_link, feeling_type: Conttents_array[index].feeling_type, Category: Conttents_array[index].capacity)
+//                break
+//            }
+//        }
+        
+//        flag_cheking(CatgeryTitle : selectedCatrgory , FeelingName : selectedFeeling , c_array : Conttents_array )
+        
+        if let contents = flag_checking(CategoryTitle : selectedCatrgory , FeelingName : selectedFeeling , c_array : Conttents_array) { ContentsBaseView(Content_title: contents.Content_title,Content_description: contents.Content_description,Content_image: contents.Content_image,Content_link: contents.Content_link,feeling_type: contents.feeling_type,Category: contents.Category) }
+    }
+    func flag_checking(CategoryTitle: String, FeelingName: String, c_array: Array<Contents>) -> Contents? { return c_array.first { content in content.Category == CategoryTitle && content.feeling_type == FeelingName } }
+    
+    //Func for Updating :
+//    func flag_Updating(CategoryTitle: String, FeelingName: String, c_array: Array<Contents>) -> Contents? { let c_array = c_array.shuffled() return c_array.first { content in content.Category == CategoryTitle && content.feelingType == FeelingName } }
+//
        
         
         //       static var obj1 = ContentsBaseView(Content_title: "بودكاست تنفس - كنبة السبت", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "Worry" , Category : "Audio")
@@ -47,22 +65,21 @@ struct Recommendation: View {
 //         })
 //         } //End of big Vstack
          
-    } }
+}
  
-class Contents {
+public class Contents {
     var Content_title : String
     var Content_description : String
     var Content_image : String
     var Content_link : String
     var feeling_type : String
     var Category : String
-    var contentsArray : Array<Contents>
+    
     
     
    // var object : Contents
-  
     
-    init(Content_title: String, Content_description: String, Content_image: String, Content_link: String, feeling_type: String, Category: String,contentsArray : Array<Contents>) {
+    init(Content_title: String, Content_description: String, Content_image: String, Content_link: String, feeling_type: String, Category: String) {
         
         self.Content_title = Content_title
         self.Content_description = Content_description
@@ -71,17 +88,21 @@ class Contents {
         self.feeling_type = feeling_type
         self.Category = Category
         
-        self.contentsArray=contentsArray
         
     }
 
     
+//    func flag_cheking(CatgeryTitle : String , FeelingName : String, c_array : Array<Contents>)  {
+//        for val in c_array {
+//            if(val.Category==CatgeryTitle && val.feeling_type==FeelingName){
+//                ContentsBaseView(Content_title: val.Content_title,Content_description: val.Content_description,Content_image: val.Content_image,Content_link: val.Content_link,feeling_type: val.feeling_type,Category: val.Category)
+//                break
+//            }
+//        }
+//    }
     
-    
-    
-    
-//   var content1=Contents(Content_title: "بودكاست تنفس - كنبة السبت", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "Worry" , Category : "Audio")
-////    
+//    var content1=Contents(Content_title: "بودكاست تنفس - كنبة السبت", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "Worry" , Category : "Audio")
+////
 //var content2=Contents(Content_title: "بودكاست تنفس - كنبة السبت", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "Worry" , Category : "Audio")
 ////    
 // var content3=Contents(Content_title: "بودكاست تنفس - كنبة السبت", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "Worry" , Category : "Audio")

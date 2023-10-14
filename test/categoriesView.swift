@@ -15,10 +15,10 @@ struct categoriesView: View {
         let title: String
         
     }
-    private let adaptiveColumns =
-    [
-        GridItem(.adaptive(minimum: 170))
-    ]
+   private let adaptiveColumns =
+   [
+      GridItem(.adaptive(minimum: 170))
+  ]
     
     private let titles = ["مشروبات", "صوتيات", "كتب", "رياضة"]
     var body: some View
@@ -38,7 +38,7 @@ struct categoriesView: View {
                 
                 VStack
                 {
-                    LazyVGrid(columns:adaptiveColumns,spacing: 20)
+                  LazyVGrid(columns:adaptiveColumns,spacing: 20)
                     {
                         ForEach(0..<4, id: \.self)
                         {
