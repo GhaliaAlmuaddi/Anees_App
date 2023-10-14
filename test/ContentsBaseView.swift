@@ -24,7 +24,7 @@ struct ContentsBaseView: View {
             Text("")
                 .toolbar{
                     Button("تحديث"){
-                        
+                        Recommendation.flag_Updating(CategoryTitle: Content_title, FeelingName: feeling_type, c_array: Recommendation.Conttents_array)
                     }
                     Text("\(Category)")
                         .multilineTextAlignment(.center)

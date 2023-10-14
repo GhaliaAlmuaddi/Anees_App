@@ -14,15 +14,17 @@ struct Recommendation: View {
     var selectedFeeling : String
     var selectedCatrgory : String
     
+    static let Conttents_array = [
+        Contents(Content_title: "بودكاست تنفس - كنبة السبت، كتي ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "كتب"),
+        Contents(Content_title: "، صوتيات بودكاست تنفس - كنبة السبت", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "صوتيات"),
+        Contents(Content_title: "بودكاست تنفس - كنبة السبت ، مشروبات ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "مشروبات"),
+        Contents(Content_title: "بودكاست تنفس - كنبة السبت ، رياضه ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "رياضة"),
+        Contents(Content_title: "بودكاست تنفس - كنبة السبت ، رياضه2 ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "رياضة")]
+    
     var body: some View {
         
         
-        let Conttents_array = [
-            Contents(Content_title: "بودكاست تنفس - كنبة السبت، كتي ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "كتب"),
-            Contents(Content_title: "، صوتيات بودكاست تنفس - كنبة السبت", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "صوتيات"),
-            Contents(Content_title: "بودكاست تنفس - كنبة السبت ، مشروبات ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "مشروبات"),
-            Contents(Content_title: "بودكاست تنفس - كنبة السبت ، رياضه ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "رياضة"),
-            Contents(Content_title: "بودكاست تنفس - كنبة السبت ، رياضه2 ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "رياضة")]
+      
 
         
         
@@ -31,7 +33,7 @@ struct Recommendation: View {
         ZStack{
 
             
-            if let contents = flag_checking(CategoryTitle : selectedCatrgory , FeelingName : selectedFeeling , c_array : Conttents_array) { ContentsBaseView(Content_title: contents.Content_title,Content_description: contents.Content_description,Content_image: contents.Content_image,Content_link: contents.Content_link,feeling_type: contents.feeling_type,Category: contents.Category)
+            if let contents = flag_checking(CategoryTitle : selectedCatrgory , FeelingName : selectedFeeling , c_array : Recommendation.Conttents_array) { ContentsBaseView(Content_title: contents.Content_title,Content_description: contents.Content_description,Content_image: contents.Content_image,Content_link: contents.Content_link,feeling_type: contents.feeling_type,Category: contents.Category)
                 
             }
             
@@ -64,7 +66,7 @@ struct Recommendation: View {
     
 //    Func for Updating :
     
-    func flag_Updating(CategoryTitle: String, FeelingName: String, c_array: Array<Contents>) -> Contents? { let c_array = c_array.shuffled(); return c_array.first { content in content.Category == CategoryTitle && content.feeling_type == FeelingName } }
+    static func flag_Updating(CategoryTitle: String, FeelingName: String, c_array: Array<Contents>) -> Contents? { let c_array = c_array.shuffled(); return c_array.first { content in content.Category == CategoryTitle && content.feeling_type == FeelingName } }
 
         
 
