@@ -20,15 +20,19 @@ struct ContentsBaseView: View {
     
     var body: some View {
         VStack{
-           /* NavigationView{
-                Text("")
-                    .toolbar{
-                        Button("تحديث"){}
-                        Text("الصوتيات")
-                            .multilineTextAlignment(.center)
-                    }} */
+            //            NavigationView{
+            Text("")
+                .toolbar{
+                    Button("تحديث"){
+                        
+                    }
+                    Text("\(Category)")
+                        .multilineTextAlignment(.center)
+                }
+//        }
             ZStack{
-                Rectangle().fill(Color("BlueOne")).frame(width: 500, height:500).position(x:150,y:130)
+                Rectangle().fill(Color("BlueOne"))
+                    .frame(width: 500, height:500).position(x:150,y:130)
                 Image(Content_image).resizable().frame(width: 305.78 , height:293 ).cornerRadius(30).shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/).offset(y:50).multilineTextAlignment(.center)
             }.padding() //End of Zstack
             VStack{
