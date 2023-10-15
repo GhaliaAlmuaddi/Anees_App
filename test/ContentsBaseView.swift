@@ -33,7 +33,10 @@ struct ContentsBaseView: View {
                     .multilineTextAlignment(.center).font(.title)
                     .toolbar{
                         Button{
-                            Recommendation.flag_Updating(CategoryTitle: Content_title, FeelingName: feeling_type, c_array: Recommendation.Conttents_array)
+//                            Recommendation.flag_Updating(CategoryTitle: Content_title, FeelingName: feeling_type, c_array: Recommendation.Conttents_array)
+                            
+                            
+//                             var s = Recommendation(selectedFeeling: feeling_type, selectedCatrgory: Category )
                         }label: {
                             Image(systemName: "arrow.2.squarepath")
                                 .foregroundColor(Color("Beige"))
@@ -41,7 +44,7 @@ struct ContentsBaseView: View {
                         
                         Text("")
                             
-                    }
+                   }
 //                ZStack{
                     Image(Content_image).resizable().frame(width: 305.78 , height:293 ).cornerRadius(30).shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)//.offset(y:50)
                         .multilineTextAlignment(.center)
@@ -51,14 +54,7 @@ struct ContentsBaseView: View {
                     Text(Content_description).multilineTextAlignment(.trailing).padding(20)
 //                }//.offset(x:10 , y:-30)
                 
-                Button(action: {
-                    /*   Link(Destination: URL(string: "https://www.apple.com")!
-                     )  */ }, label: {
-                         
-                         Text("للاستماع")
-                         
-                         
-                     })
+//                Link("للتفاصيل", destination: URL(string : Content_link)!) \\ Link here
             }//.ignoresSafeArea().padding() //End of big Vstack
         }.ignoresSafeArea(.all)
     }

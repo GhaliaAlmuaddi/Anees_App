@@ -89,9 +89,7 @@ struct CardViewA: View {
 #Preview {
     categoriesView(mood: "")
 }
-
-                           
-                           
+                         
 //
 //NavigationLink(<#LocalizedStringKey#>, destination: Recommendation())
 // Button {
