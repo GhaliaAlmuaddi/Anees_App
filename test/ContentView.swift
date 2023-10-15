@@ -61,7 +61,8 @@ struct ContentView: View {
                 }// end of 2nd hstack
                 
             }}.background(Color("BackgroundColor"))
-            .ignoresSafeArea().padding()
+            .ignoresSafeArea()
+            
         
         // end of lower section
     }

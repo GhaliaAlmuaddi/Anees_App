@@ -16,49 +16,25 @@ struct Recommendation: View {
     
     static let Conttents_array = [
         Contents(Content_title: "بودكاست تنفس - كنبة السبت، كتي ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "كتب"),
+        
         Contents(Content_title: "، صوتيات بودكاست تنفس - كنبة السبت", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "صوتيات"),
+        
         Contents(Content_title: "بودكاست تنفس - كنبة السبت ، مشروبات ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "مشروبات"),
+        
         Contents(Content_title: "بودكاست تنفس - كنبة السبت ، رياضه ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "رياضة"),
+        
         Contents(Content_title: "بودكاست تنفس - كنبة السبت ، رياضه2 ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "رياضة")]
     
     var body: some View {
         
-        
-      
-
-        
-        
-//        VStack{
-//
         ZStack{
-
-            
             if let contents = flag_checking(CategoryTitle : selectedCatrgory , FeelingName : selectedFeeling , c_array : Recommendation.Conttents_array) { ContentsBaseView(Content_title: contents.Content_title,Content_description: contents.Content_description,Content_image: contents.Content_image,Content_link: contents.Content_link,feeling_type: contents.feeling_type,Category: contents.Category)
                 
             }
             
-        
-//        Rectangle().fill( Color("BlueOne")).frame(width: 500, height:500).position(x:150,y:130)
-//        Image("كنبة السبت").resizable()//.frame(width: 305.78 , height:293 ).cornerRadius(30)
-//                .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/).position(x: 180, y: 255)
-//        }.padding() //End of Zstack
-//        VStack{
-//        Text(" selected feeling \(selectedFeeling) , selected catorgy \(selectedCatrgory)").lineSpacing(1).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).padding()
-//        Text("نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس").multilineTextAlignment(.trailing).padding(20)
-//        }//.offset(x:10 , y:-76)
-//        Button(action: {
-//            flag_Updating(CategoryTitle: selectedCatrgory, FeelingName: selectedCatrgory, c_array: Conttents_array)
-////            print(" selected feeling \(selectedFeeling) , selected catorgy \(selectedCatrgory)")
-//        /*   Link(Destination: URL(string: "https://www.apple.com")!
-//         )  */ }, label: {
-//        
-//        Text( "للاستماع").frame(width : 95, height :90 ,alignment: .center)
-//                 .background(.red).cornerRadius(8)
-//        })
-//        } //End of big Vstack
         }
-
-
+        .padding(.bottom, 50)
+        .ignoresSafeArea()
     }
     
     func flag_checking(CategoryTitle: String, FeelingName: String, c_array: Array<Contents>) -> Contents? { return c_array.first { content in content.Category == CategoryTitle && content.feeling_type == FeelingName } }
@@ -98,14 +74,7 @@ public class Contents {
     }
 
     
-    func flag_cheking(CatgeryTitle : String , FeelingName : String, c_array : Array<Contents>)  {
-        for val in c_array {
-            if(val.Category==CatgeryTitle && val.feeling_type==FeelingName){
-                ContentsBaseView(Content_title: val.Content_title,Content_description: val.Content_description,Content_image: val.Content_image,Content_link: val.Content_link,feeling_type: val.feeling_type,Category: val.Category)
-                break
-            }
-        }
-    }
+
     
 
 }
@@ -152,3 +121,33 @@ public class Contents {
 ///
 /////        flag_checking(CategoryTitle : selectedCatrgory , FeelingName : selectedFeeling , c_array : Conttents_array )
 
+
+//func flag_cheking(CatgeryTitle : String , FeelingName : String, c_array : Array<Contents>)  {
+//        for val in c_array {
+//            if(val.Category==CatgeryTitle && val.feeling_type==FeelingName){
+//                ContentsBaseView(Content_title: val.Content_title,Content_description: val.Content_description,Content_image: val.Content_image,Content_link: val.Content_link,feeling_type: val.feeling_type,Category: val.Category)
+//                break
+//            }
+//        }
+//    }
+
+
+
+//        Rectangle().fill( Color("BlueOne")).frame(width: 500, height:500).position(x:150,y:130)
+//        Image("كنبة السبت").resizable()//.frame(width: 305.78 , height:293 ).cornerRadius(30)
+//                .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/).position(x: 180, y: 255)
+//        }.padding() //End of Zstack
+//        VStack{
+//        Text(" selected feeling \(selectedFeeling) , selected catorgy \(selectedCatrgory)").lineSpacing(1).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).padding()
+//        Text("نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس").multilineTextAlignment(.trailing).padding(20)
+//        }//.offset(x:10 , y:-76)
+//        Button(action: {
+//            flag_Updating(CategoryTitle: selectedCatrgory, FeelingName: selectedCatrgory, c_array: Conttents_array)
+////            print(" selected feeling \(selectedFeeling) , selected catorgy \(selectedCatrgory)")
+//        /*   Link(Destination: URL(string: "https://www.apple.com")!
+//         )  */ }, label: {
+//
+//        Text( "للاستماع").frame(width : 95, height :90 ,alignment: .center)
+//                 .background(.red).cornerRadius(8)
+//        })
+//        } //End of big Vstack
