@@ -23,8 +23,7 @@ struct categoriesView: View {
     private let titles = ["مشروبات", "صوتيات", "كتب", "رياضة"]
     var body: some View
     {
-        NavigationView
-        {
+
             ScrollView
             {
           
@@ -44,7 +43,6 @@ struct categoriesView: View {
                 }//VStack
                 .padding(.horizontal)
             }//Scroll
-        }//navigation
     }//body
 }//struct
 

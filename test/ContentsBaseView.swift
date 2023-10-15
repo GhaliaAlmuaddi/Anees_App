@@ -23,10 +23,15 @@ struct ContentsBaseView: View {
             //            NavigationView{
             Text("")
                 .toolbar{
-                    Button("تحديث"){
+                    Button{
                         Recommendation.flag_Updating(CategoryTitle: Content_title, FeelingName: feeling_type, c_array: Recommendation.Conttents_array)
+                    }label: {
+                        Image(systemName: "arrow.2.squarepath")
+                            .foregroundColor(Color("Beige"))
                     }
+                    
                     Text("\(Category)")
+                        .foregroundColor(Color("Beige"))
                         .multilineTextAlignment(.center)
                 }
 //        }
