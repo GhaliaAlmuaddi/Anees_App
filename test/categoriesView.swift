@@ -17,19 +17,24 @@ struct categoriesView: View {
     }
     private let adaptiveColumns =
     [
-        GridItem(.adaptive(minimum: 150))
+        GridItem(.adaptive(minimum: 130),spacing: 20)
     ]
     
     private let titles = ["مشروبات", "صوتيات", "كتب", "رياضة"]
     var body: some View
     {
-
+        
+      Text("ايش حاب تجرب ")
+            .font(.largeTitle).bold()
+            .multilineTextAlignment(.center)
+            .offset(CGSize(width: 50.0, height: 0.0))
+        
             ScrollView
             {
           
                 VStack
                 {
-                    LazyVGrid(columns:adaptiveColumns,spacing: 10)
+                    LazyVGrid(columns:adaptiveColumns,spacing: 20)
                     {
                         ForEach(0..<titles.count, id: \.self)
                         {
@@ -73,8 +78,9 @@ struct CardViewA: View {
                 .frame(width: reader.size.width,height: reader.size.height)
                 .background(Color(red: 0.3411764801, green: 0.4627451003, blue: 0.6352941394, opacity:1))
             }
-            .frame(height: 330)
+            .frame(height: 310)
             .clipShape(RoundedRectangle(cornerRadius: 19))
+            
             
     }//navigation
 )}//body
