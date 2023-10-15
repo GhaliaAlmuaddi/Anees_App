@@ -14,7 +14,7 @@ struct ContentView: View {
     var sadImg = "sad"
     var lazyImg = "lazy"
     var worryImg = "worry"
-    var sadryDes = "حزن: يجعلك القلق تفكر في الأمور السلبية وتشعر بعدم الارتياح."
+    var sadryDes = "الحزن: حالة عاطفية تتميز بمشاعر الألم أو التعاسة أو الأسى."
     var angryDec = "غضب: شعور بالإستياء والإستثارة النفسية مع الرغبة في المقاومة."
     var lazyDec = "خمول: شعور بالعجز عن القيام بالأنشطة اليومية بشكل فعّال."
     var worryDes = "قلق: يجعلك القلق تفكر في الأمور السلبية وتشعر بعدم الارتياح."
@@ -22,9 +22,8 @@ struct ContentView: View {
     @State var mood : String = ""
     
     var body: some View {
-        NavigationView {
+        //NavigationView {
         VStack {
-            
                 //MARK: Title
                 VStack(alignment:.trailing) {
                     Text("كيف تشعر الآن ؟ ")
@@ -60,7 +59,7 @@ struct ContentView: View {
                     }).shadow(color: .gray, radius: 3, x: 0, y: 3)
                 }// end of 2nd hstack
                 
-            }}.background(Color("BackgroundColor"))
+            }.background(Color("BackgroundColor"))
             .ignoresSafeArea()
             
         

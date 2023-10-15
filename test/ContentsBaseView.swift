@@ -28,7 +28,7 @@ struct ContentsBaseView: View {
             
             VStack{
                 
-                Text("\(Category)")
+                Text("") // we added the Category here
                     .foregroundColor(Color("Beige"))
                     .multilineTextAlignment(.center).font(.title)
                     .toolbar{
@@ -37,7 +37,7 @@ struct ContentsBaseView: View {
                         }label: {
                             Image(systemName: "arrow.2.squarepath")
                                 .foregroundColor(Color("Beige"))
-                        }
+                        }.navigationTitle(Category)
                         
                         Text("")
                             
