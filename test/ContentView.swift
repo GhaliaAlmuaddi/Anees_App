@@ -14,7 +14,7 @@ struct ContentView: View {
     var sadImg = "sad"
     var lazyImg = "lazy"
     var worryImg = "worry"
-    var sadryDes = "الحزن: حالة عاطفية تتميز بمشاعر الألم أو التعاسة أو الأسى."
+    var sadryDes = "حزن: حالة عاطفية تتميز بمشاعر الألم أو التعاسة أو الأسى."
     var angryDec = "غضب: شعور بالإستياء والإستثارة النفسية مع الرغبة في المقاومة."
     var lazyDec = "خمول: شعور بالعجز عن القيام بالأنشطة اليومية بشكل فعّال."
     var worryDes = "قلق: يجعلك القلق تفكر في الأمور السلبية وتشعر بعدم الارتياح."
@@ -32,9 +32,9 @@ struct ContentView: View {
                 
                 //MARK: Title
                 VStack(alignment:.trailing) {
-                    Text("كيف تشعر الآن ؟ ")
+                    Text("‎ماهو شعورك الآن ؟ ")
                     
-                        .font(.largeTitle).bold()
+                        .font(.title).bold()
                         .multilineTextAlignment(.trailing)
                         .offset(CGSize(width: 50.0, height: 0.0))
                 }

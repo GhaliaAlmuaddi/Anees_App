@@ -33,10 +33,10 @@ struct categoriesView: View {
                 Spacer()
                 
                 HStack{
-                    Text("اقتراحاتنا لتغيير مزاجك ...")
+                    Text("أنيس يقترح لك ...")
                         .font(.title).bold()
                         .multilineTextAlignment(.trailing)
-                        .offset(CGSize(width: 20.0, height: 0.0))
+                        .offset(CGSize(width: 50.0, height: 0.0))
                     
                 }.padding(20)
                 
@@ -88,7 +88,7 @@ struct CardViewA: View {
                     .font(.title)
                     .foregroundColor(Color("BlueOne"))
                     }
-                    .frame(width: 250, height: 30)
+                    .frame(width: 220, height: 30)
                     .background(Color("Beige"))
                     
                 } //Vstack
@@ -96,7 +96,7 @@ struct CardViewA: View {
                 .background(Color("BlueOne"))
             }
             
-            .frame(width: 250, height: 350)
+            .frame(width: 220, height: 350)
             .clipShape(RoundedRectangle(cornerRadius: 19))
             
             
