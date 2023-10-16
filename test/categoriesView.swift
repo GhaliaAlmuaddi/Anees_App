@@ -17,7 +17,7 @@ struct categoriesView: View {
     }
     private let adaptiveColumns =
     [
-        GridItem(.adaptive(minimum: 130),spacing: 20)
+        GridItem(.adaptive(minimum: 180),spacing: 20)
     ]
     
     private let titles = ["مشروبات", "صوتيات", "كتب", "رياضة"]
@@ -27,13 +27,18 @@ struct categoriesView: View {
             Color("BackgroundColor")
                 .ignoresSafeArea(.all)
             
+            
+            
             VStack{
                 Spacer()
-                Text("ايش حاب تجرب ")
-                    .font(.largeTitle).bold()
-                    .multilineTextAlignment(.center)
-                    .offset(CGSize(width: 50.0, height: 0.0))
                 
+                HStack{
+                    Text("اقتراحاتنا لتغيير مزاجك ...")
+                        .font(.title).bold()
+                        .multilineTextAlignment(.trailing)
+                        .offset(CGSize(width: 20.0, height: 0.0))
+                    
+                }.padding(20)
                 
                 ScrollView
                 {
@@ -78,18 +83,25 @@ struct CardViewA: View {
                         .resizable()
                         .scaledToFit()
                     
+                    HStack{
                     Text(card.title)
-                        .font(.title)
-                        .foregroundColor(Color(red: 0.949, green: 0.898, blue: 0.835))
+                    .font(.title)
+                    .foregroundColor(Color("BlueOne"))
+                    }
+                    .frame(width: 250, height: 30)
+                    .background(Color("Beige"))
+                    
                 } //Vstack
                 .frame(width: reader.size.width,height: reader.size.height)
-                .background(Color(red: 0.3411764801, green: 0.4627451003, blue: 0.6352941394, opacity:1))
+                .background(Color("BlueOne"))
             }
-            .frame(width: 160, height: 260)
+            
+            .frame(width: 250, height: 350)
             .clipShape(RoundedRectangle(cornerRadius: 19))
             
             
     }//navigation
+            
 )}//body
 }
                            

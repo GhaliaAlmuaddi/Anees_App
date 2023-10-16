@@ -27,6 +27,7 @@ struct Recommendation: View {
     var body: some View {
         ZStack {
             Color("BackgroundColor")
+                .ignoresSafeArea()
             
             Rectangle()
                 .fill(Color("BlueOne"))
@@ -35,8 +36,6 @@ struct Recommendation: View {
                 .ignoresSafeArea()
             
             VStack {
-                Text("")
-                
                 if let content = contents {
                     Text(content.Content_title)
                         .font(.title)
@@ -55,7 +54,10 @@ struct Recommendation: View {
                     Link("للتفاصيل", destination: URL(string: content.Content_link)!)
                         .foregroundColor(.blue)
                 }
-                
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
                 Button(action: {
                     contents = flag_Updating(CategoryTitle: selectedCategory, FeelingName: selectedFeeling, c_array: Conttents_array)
                 }) {
@@ -65,6 +67,7 @@ struct Recommendation: View {
             }
         }
     }
+
     
     func flag_Updating(CategoryTitle: String, FeelingName: String, c_array: [Contents]) -> Contents? {
         let shuffledArray = c_array.shuffled()
