@@ -8,81 +8,93 @@
 import SwiftUI
 
 struct Recommendation: View {
+    @State var contents: Contents?
     
-    //contents.append(obj1)
+    var selectedFeeling: String
+    var selectedCategory: String
     
-    var selectedFeeling : String
-    var selectedCatrgory : String
-    
-    static let Conttents_array = [
-        Contents(Content_title: "بودكاست تنفس - كنبة السبت، كتي ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "كتب"),
-        
-        Contents(Content_title: "، صوتيات بودكاست تنفس - كنبة السبت", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "صوتيات"),
-        
-        Contents(Content_title: "بودكاست تنفس - كنبة السبت ، مشروبات ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "مشروبات"),
-        
-        Contents(Content_title: "بودكاست تنفس - كنبة السبت ، رياضه ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "رياضة"),
-        
-        Contents(Content_title: "بودكاست تنفس - كنبة السبت ، رياضه2 ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "رياضة")]
+    let Conttents_array = [
+            Contents(Content_title: "بودكاست تنفس - كنبة السبت، كتي ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "كتب"),
+            
+            Contents(Content_title: "، صوتيات بودكاست تنفس - كنبة السبت", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "صوتيات"),
+            
+            Contents(Content_title: "بودكاست تنفس - كنبة السبت ، مشروبات ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "مشروبات"),
+            
+            Contents(Content_title: "بودكاست تنفس - كنبة السبت ، رياضه ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "رياضة"),
+            
+            Contents(Content_title: "بودكاست تنفس - كنبة السبhhت ، رياضه2 ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، ffffffff تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "رياضة")]
     
     var body: some View {
-        
-        //ZStack{
-            if let contents = flag_checking(CategoryTitle : selectedCatrgory , FeelingName : selectedFeeling , c_array : Recommendation.Conttents_array) { ContentsBaseView(Content_title: contents.Content_title,Content_description: contents.Content_description,Content_image: contents.Content_image,Content_link: contents.Content_link,feeling_type: contents.feeling_type,Category: contents.Category)
-                //
-                //                if let contents = flag_Updating(CategoryTitle : selectedCatrgory , FeelingName : selectedFeeling , c_array : Recommendation.Conttents_array) {
-                //
-                //                    ContentsBaseView(Content_title: contents.Content_title,Content_description: contents.Content_description,Content_image: contents.Content_image,Content_link: contents.Content_link,feeling_type: contents.feeling_type,Category: contents.Category)
-                //
-            }
+        ZStack {
+            Color("BackgroundColor")
             
-//        }
-//        .padding(.bottom, 50)
-//        .ignoresSafeArea()
-        
-        //        func Updating (C_array : Array<Contents>) {
-        //            if let up_con = flag_Updating(CategoryTitle : selectedCatrgory , FeelingName : selectedFeeling , c_array : Recommendation.Conttents_array) { ContentsBaseView(Content_title: C_array.Content_title,Content_description: C_array.Content_description,Content_image: C_array.Content_image,Content_link: C_array.Content_link,feeling_type: C_array.feeling_type,Category: C_array.Category)
-        //        }
-        //    }
+            Rectangle()
+                .fill(Color("BlueOne"))
+                .frame(width: 500, height: 500)
+                .position(x: 150, y: 130)
+                .ignoresSafeArea()
+            
+            VStack {
+                Text("")
+                
+                if let content = contents {
+                    Text(content.Content_title)
+                        .font(.title)
+                        .foregroundColor(Color("Beige"))
+                    
+                    Image(content.Content_image)
+                        .resizable()
+                        .frame(width: 305.78, height: 293)
+                        .cornerRadius(30)
+                        .shadow(radius: 10)
+                    
+                    Text(content.Content_description)
+                        .multilineTextAlignment(.trailing)
+                        .padding(20)
+                    
+                    Link("للتفاصيل", destination: URL(string: content.Content_link)!)
+                        .foregroundColor(.blue)
+                }
+                
+                Button(action: {
+                    contents = flag_Updating(CategoryTitle: selectedCategory, FeelingName: selectedFeeling, c_array: Conttents_array)
+                }) {
+                    Image(systemName: "arrow.2.squarepath")
+                        .font(.system(size: 15))
+                }
+            }
+        }
     }
     
-    func flag_checking(CategoryTitle: String, FeelingName: String, c_array: Array<Contents>) -> Contents? { return c_array.first { content in content.Category == CategoryTitle && content.feeling_type == FeelingName } }
-    
-    
-    //    Func for Updating :
-    
-    static func flag_Updating(CategoryTitle: String, FeelingName: String, c_array: Array<Contents>) -> Contents? { let c_array = c_array.shuffled(); return c_array.first { content in content.Category == CategoryTitle && content.feeling_type == FeelingName } }
-    
-    
+    func flag_Updating(CategoryTitle: String, FeelingName: String, c_array: [Contents]) -> Contents? {
+        let shuffledArray = c_array.shuffled()
+        return shuffledArray.first { content in content.Category == CategoryTitle && content.feeling_type == FeelingName }
+    }
     
     public class Contents {
-        var Content_title : String
-        var Content_description : String
-        var Content_image : String
-        var Content_link : String
-        var feeling_type : String
-        var Category : String
-        
-        
-        
-        // var object : Contents
+        var Content_title: String
+        var Content_description: String
+        var Content_image: String
+        var Content_link: String
+        var feeling_type: String
+        var Category: String
         
         init(Content_title: String, Content_description: String, Content_image: String, Content_link: String, feeling_type: String, Category: String) {
-            
             self.Content_title = Content_title
             self.Content_description = Content_description
             self.Content_image = Content_image
             self.Content_link = Content_link
             self.feeling_type = feeling_type
             self.Category = Category
-  
         }
-    }}
-    
-    #Preview {
-        Recommendation(selectedFeeling: "", selectedCatrgory: "")
     }
-    
+}
+
+struct Recommendation_Previews: PreviewProvider {
+    static var previews: some View {
+        Recommendation(selectedFeeling: "", selectedCategory: "")
+    }
+}
     
     
     
