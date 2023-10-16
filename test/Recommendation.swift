@@ -8,96 +8,104 @@
 import SwiftUI
 
 struct Recommendation: View {
-    @State var contents: Contents?
     
-    var selectedFeeling: String
-    var selectedCategory: String
+    //contents.append(obj1)
+    @State var contents: Contents?
+    var selectedFeeling : String
+    var selectedCatrgory : String
     
     let Conttents_array = [
-            Contents(Content_title: "بودكاست تنفس - كنبة السبت، كتي ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "كتب"),
-            
-            Contents(Content_title: "، صوتيات بودكاست تنفس - كنبة السبت", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "صوتيات"),
-            
-            Contents(Content_title: "بودكاست تنفس - كنبة السبت ، مشروبات ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "مشروبات"),
-            
-            Contents(Content_title: "بودكاست تنفس - كنبة السبت ، رياضه ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "رياضة"),
-            
-            Contents(Content_title: "بودكاست تنفس - كنبة السبhhت ، رياضه2 ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، ffffffff تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "رياضة")]
+        Contents(Content_title: "بودكاست تنفس - كنبة السبت، كتي ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "كتب"),
+        
+        Contents(Content_title: "، صوتيات بودكاست تنفس - كنبة السبت", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "صوتيات"),
+        
+        Contents(Content_title: "بودكاست تنفس - كنبة السبت ، مشروبات ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "مشروبات"),
+        
+        Contents(Content_title: "بودكاست تنفس - كنبة السبت ، رياضه ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "رياضة"),
+        
+        Contents(Content_title: "بودكاست تنفس - كنبة السبhhت ، رياضه2 ", Content_description: "نكبر فتكبر مهامنا وتكثر مسؤولياتنا، فيكبر قلقنا عشرات المرات، وبدلًا من أن يعمل القلق عمله الحقيقي في دفعنا لحياة أفضل، على العكس تمامًا، يشغلنا عن الحياة بأكملها..وننسى حتى كيف نتنفّس", Content_image: "كنبة السبت", Content_link: "ww.wwlink", feeling_type: "worry" , Category : "رياضة")]
     
     var body: some View {
-        ZStack {
-            Color("BackgroundColor")
-                .ignoresSafeArea()
-            
-            Rectangle()
-                .fill(Color("BlueOne"))
-                .frame(width: 500, height: 500)
-                .position(x: 150, y: 130)
-                .ignoresSafeArea()
-            
-            VStack {
-                if let content = contents {
-                    Text(content.Content_title)
-                        .font(.title)
+        
+      
+            ZStack{
+                Text("")
+                Color("BackgroundColor")
+                    .ignoresSafeArea(.all)
+                
+                Rectangle().fill(Color("BlueOne"))
+                    .frame(width: 500, height:500)
+                    .position(x:150,y:130)
+                    .ignoresSafeArea()
+                
+                VStack{
+                    
+                    Text("") // we added the Category here
                         .foregroundColor(Color("Beige"))
-                    
-                    Image(content.Content_image)
-                        .resizable()
-                        .frame(width: 305.78, height: 293)
-                        .cornerRadius(30)
-                        .shadow(radius: 10)
-                    
-                    Text(content.Content_description)
-                        .multilineTextAlignment(.trailing)
-                        .padding(20)
-                    
-                    Link("للتفاصيل", destination: URL(string: content.Content_link)!)
-                        .foregroundColor(.blue)
-                }
-            }
-        }
-        .toolbar {
-            ToolbarItem(placement: .primaryAction) {
-                Button(action: {
-                    contents = flag_Updating(CategoryTitle: selectedCategory, FeelingName: selectedFeeling, c_array: Conttents_array)
-                }) {
-                    Image(systemName: "arrow.2.squarepath")
-                        .font(.system(size: 15))
-                }
-            }
-        }
-    }
+                        .multilineTextAlignment(.center).font(.title)
 
-    
-    func flag_Updating(CategoryTitle: String, FeelingName: String, c_array: [Contents]) -> Contents? {
-        let shuffledArray = c_array.shuffled()
-        return shuffledArray.first { content in content.Category == CategoryTitle && content.feeling_type == FeelingName }
+                                
+                        var content = contents
+                        if let content = flag_Updating(CategoryTitle: selectedCatrgory , FeelingName: selectedFeeling, c_array: Conttents_array){
+                        
+                                Image(content.Content_image  ).resizable().frame(width: 305.78 , height:293 ).cornerRadius(30).shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)//.offset(y:50)
+                                    .multilineTextAlignment(.center)
+                                
+                                Text(content.Content_title  ).lineSpacing(1).padding().multilineTextAlignment(.center).bold()
+                                    .font(.system(size: 20))
+                                Text(content.Content_description  ).multilineTextAlignment(.trailing).padding(20)
+                                
+                                
+                                Link("للتفاصيل", destination: URL(string : content.Content_link )!).foregroundColor(.blue)
+                                
+                                
+                            
+                        }}}.toolbar {
+                            ToolbarItem(placement: .primaryAction) {
+                                Button(action: {
+                                    contents = flag_Updating(CategoryTitle: selectedCatrgory, FeelingName: selectedFeeling, c_array: Conttents_array)
+                                }) {
+                                    Image(systemName: "arrow.2.squarepath")
+                                        .font(.system(size: 15))
+                                }
+                            }
+                        }
+             
+        }
+        func flag_checking(CategoryTitle: String, FeelingName: String, c_array: Array<Contents>) -> Contents? { return c_array.first { content in content.Category == CategoryTitle && content.feeling_type == FeelingName } }
+        
+        
+        //    Func for Updating :
+        
+        func flag_Updating(CategoryTitle: String, FeelingName: String, c_array: Array<Contents>) -> Contents? { let c_array = c_array.shuffled(); return c_array.first { content in content.Category == CategoryTitle && content.feeling_type == FeelingName } }
     }
-    
     public class Contents {
-        var Content_title: String
-        var Content_description: String
-        var Content_image: String
-        var Content_link: String
-        var feeling_type: String
-        var Category: String
+        var Content_title : String
+        var Content_description : String
+        var Content_image : String
+        var Content_link : String
+        var feeling_type : String
+        var Category : String
+        
+        
+        
+        // var object : Contents
         
         init(Content_title: String, Content_description: String, Content_image: String, Content_link: String, feeling_type: String, Category: String) {
+            
             self.Content_title = Content_title
             self.Content_description = Content_description
             self.Content_image = Content_image
             self.Content_link = Content_link
             self.feeling_type = feeling_type
             self.Category = Category
+            
         }
     }
-}
 
-struct Recommendation_Previews: PreviewProvider {
-    static var previews: some View {
-        Recommendation(selectedFeeling: "", selectedCategory: "")
+    #Preview {
+        Recommendation(selectedFeeling: "", selectedCatrgory: "")
     }
-}
     
     
     

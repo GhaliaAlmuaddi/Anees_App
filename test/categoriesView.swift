@@ -72,7 +72,7 @@ struct CardViewA: View {
     var body: some View {
         
       
-        NavigationLink(destination: Recommendation(selectedFeeling: selectedMood, selectedCategory: card.title ), label:{
+        NavigationLink(destination: Recommendation(selectedFeeling: selectedMood, selectedCatrgory: card.title ), label:{
             GeometryReader
             {
                 reader in
