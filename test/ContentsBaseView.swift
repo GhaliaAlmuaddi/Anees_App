@@ -27,7 +27,7 @@ struct ContentsBaseView: View {
                 .ignoresSafeArea()
             
             VStack{
-                
+
                 Text("") // we added the Category here
                     .foregroundColor(Color("Beige"))
                     .multilineTextAlignment(.center).font(.title)
@@ -54,7 +54,7 @@ struct ContentsBaseView: View {
                     Text(Content_description).multilineTextAlignment(.trailing).padding(20)
 //                }//.offset(x:10 , y:-30)
                 
-//                Link("للتفاصيل", destination: URL(string : Content_link)!) \\ Link here
+            Link("للتفاصيل", destination: URL(string : Content_link)!)
             }//.ignoresSafeArea().padding() //End of big Vstack
         }.ignoresSafeArea(.all)
     }
@@ -65,5 +65,5 @@ struct ContentsBaseView: View {
   
 
 #Preview {
-    ContentsBaseView(Content_title : "" , Content_description : "" , Content_image : "" ,Content_link : "" , feeling_type: "" , Category : "" )
+    ContentsBaseView(Content_title : "" , Content_description : "" , Content_image : "" ,Content_link : "ww.wwlink" , feeling_type: "" , Category : "" )
 }

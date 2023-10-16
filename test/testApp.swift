@@ -9,13 +9,14 @@ import SwiftUI
 
 @main
 struct testApp: App {
-    init () {
-        UINavigationBar.appearance().backgroundColor = .white
-    }
+//    init () {
+//        UINavigationBar.appearance().backgroundColor = .white
+//    }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ContentView()
             //categoriesView()
+            Splashview()
         }
     }
 }

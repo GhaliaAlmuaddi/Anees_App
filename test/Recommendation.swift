@@ -27,7 +27,7 @@ struct Recommendation: View {
     
     var body: some View {
         
-        ZStack{
+        //ZStack{
             if let contents = flag_checking(CategoryTitle : selectedCatrgory , FeelingName : selectedFeeling , c_array : Recommendation.Conttents_array) { ContentsBaseView(Content_title: contents.Content_title,Content_description: contents.Content_description,Content_image: contents.Content_image,Content_link: contents.Content_link,feeling_type: contents.feeling_type,Category: contents.Category)
                 //
                 //                if let contents = flag_Updating(CategoryTitle : selectedCatrgory , FeelingName : selectedFeeling , c_array : Recommendation.Conttents_array) {
@@ -36,9 +36,9 @@ struct Recommendation: View {
                 //
             }
             
-        }
-        .padding(.bottom, 50)
-        .ignoresSafeArea()
+//        }
+//        .padding(.bottom, 50)
+//        .ignoresSafeArea()
         
         //        func Updating (C_array : Array<Contents>) {
         //            if let up_con = flag_Updating(CategoryTitle : selectedCatrgory , FeelingName : selectedFeeling , c_array : Recommendation.Conttents_array) { ContentsBaseView(Content_title: C_array.Content_title,Content_description: C_array.Content_description,Content_image: C_array.Content_image,Content_link: C_array.Content_link,feeling_type: C_array.feeling_type,Category: C_array.Category)
@@ -75,14 +75,8 @@ struct Recommendation: View {
             self.Content_link = Content_link
             self.feeling_type = feeling_type
             self.Category = Category
-            
-            
+  
         }
-        
-        
-        
-        
-        
     }}
     
     #Preview {

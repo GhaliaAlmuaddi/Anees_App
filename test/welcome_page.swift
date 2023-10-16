@@ -34,7 +34,7 @@
                         NavigationLink {
                             ContentView()
                         } label: {
-                            Text("يلا")
+                            Text("أبدا")
                             .bold()
                             .frame(width: 180,height: 45)
                             .background(
