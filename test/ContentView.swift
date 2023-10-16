@@ -23,7 +23,13 @@ struct ContentView: View {
     
     var body: some View {
         //NavigationView {
-        VStack {
+        
+        ZStack{
+            Color("BackgroundColor")
+                .ignoresSafeArea(.all)
+            
+            VStack {
+                
                 //MARK: Title
                 VStack(alignment:.trailing) {
                     Text("كيف تشعر الآن ؟ ")
@@ -38,8 +44,8 @@ struct ContentView: View {
                 HStack{
                     
                     NavigationLink(destination: categoriesView(mood: "sad"), label: {
-                            CardView(image: sadImg , description: sadryDes)
-                        }).shadow(color: .gray, radius: 3, x: 0, y: 3)
+                        CardView(image: sadImg , description: sadryDes)
+                    }).shadow(color: .gray, radius: 3, x: 0, y: 3)
                     
                     NavigationLink(destination: categoriesView(mood: "angry"), label: {
                         CardView(image: angryImg , description: angryDec)
@@ -59,10 +65,9 @@ struct ContentView: View {
                     }).shadow(color: .gray, radius: 3, x: 0, y: 3)
                 }// end of 2nd hstack
                 
-            }.background(Color("BackgroundColor"))
-            .ignoresSafeArea()
+            }
             
-        
+        }
         // end of lower section
     }
     

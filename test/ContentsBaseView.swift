@@ -21,6 +21,10 @@ struct ContentsBaseView: View {
     var body: some View {
         
         ZStack{
+            
+            Color("BackgroundColor")
+                .ignoresSafeArea(.all)
+            
             Rectangle().fill(Color("BlueOne"))
                 .frame(width: 500, height:500)
                 .position(x:150,y:130)
@@ -39,24 +43,25 @@ struct ContentsBaseView: View {
 //                             var s = Recommendation(selectedFeeling: feeling_type, selectedCatrgory: Category )
                         }label: {
                             Image(systemName: "arrow.2.squarepath")
-                                .foregroundColor(Color("Beige"))
+                                .font(.system(size: 15))
+
                         }.navigationTitle(Category)
                         
-                        Text("")
+                        
                             
                    }
-//                ZStack{
+
                     Image(Content_image).resizable().frame(width: 305.78 , height:293 ).cornerRadius(30).shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)//.offset(y:50)
                         .multilineTextAlignment(.center)
-//                }.padding() //End of Zstack
-//                VStack{
+
                     Text(Content_title).lineSpacing(1).padding().multilineTextAlignment(.center)
                     Text(Content_description).multilineTextAlignment(.trailing).padding(20)
-//                }//.offset(x:10 , y:-30)
+
                 
-            Link("للتفاصيل", destination: URL(string : Content_link)!)
-            }//.ignoresSafeArea().padding() //End of big Vstack
-        }.ignoresSafeArea(.all)
+                Link("للتفاصيل", destination: URL(string : Content_link)!).foregroundColor(.blue)
+            }
+
+        }
     }
 }
 

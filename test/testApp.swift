@@ -17,6 +17,7 @@ struct testApp: App {
             //ContentView()
             //categoriesView()
             Splashview()
+            
         }
     }
 }

@@ -23,31 +23,38 @@ struct categoriesView: View {
     private let titles = ["مشروبات", "صوتيات", "كتب", "رياضة"]
     var body: some View
     {
-        
-      Text("ايش حاب تجرب ")
-            .font(.largeTitle).bold()
-            .multilineTextAlignment(.center)
-            .offset(CGSize(width: 50.0, height: 0.0))
-        
-            ScrollView
-            {
-          
-                VStack
+        ZStack{
+            Color("BackgroundColor")
+                .ignoresSafeArea(.all)
+            
+            VStack{
+                Spacer()
+                Text("ايش حاب تجرب ")
+                    .font(.largeTitle).bold()
+                    .multilineTextAlignment(.center)
+                    .offset(CGSize(width: 50.0, height: 0.0))
+                
+                
+                ScrollView
                 {
-                    LazyVGrid(columns:adaptiveColumns,spacing: 20)
+                    VStack
                     {
-                        ForEach(0..<titles.count, id: \.self)
+                        LazyVGrid(columns:adaptiveColumns,spacing: 30)
                         {
-                            index in
-                            let card = Card(imageName: "\(index + 1)",
-                                            title: titles[index] )
-                            CardViewA(selectedMood: mood, card: card)
-                        } //end foreach
-                         
-                    }//laze grid
-                }//VStack
-                .padding(.horizontal)
-            }//Scroll
+                            ForEach(0..<titles.count, id: \.self)
+                            {
+                                index in
+                                let card = Card(imageName: "\(index + 1)",
+                                                title: titles[index] )
+                                CardViewA(selectedMood: mood, card: card)
+                            } //end foreach
+                            
+                        }//laze grid
+                    }//VStack
+                    .padding(.horizontal)
+                }//Scroll
+            }
+        }
     }//body
 }//struct
 
@@ -58,8 +65,7 @@ struct CardViewA: View {
     
     var body: some View {
         
-        //        Button( action: {
-        //            print("Card \(card.title) tapped , selected mood \(selectedMood)" )})
+      
     NavigationLink(destination: Recommendation(selectedFeeling: selectedMood, selectedCatrgory: card.title ), label:{
             GeometryReader
             {
@@ -78,7 +84,7 @@ struct CardViewA: View {
                 .frame(width: reader.size.width,height: reader.size.height)
                 .background(Color(red: 0.3411764801, green: 0.4627451003, blue: 0.6352941394, opacity:1))
             }
-            .frame(height: 310)
+            .frame(width: 160, height: 260)
             .clipShape(RoundedRectangle(cornerRadius: 19))
             
             
@@ -90,7 +96,3 @@ struct CardViewA: View {
     categoriesView(mood: "")
 }
                          
-//
-//NavigationLink(<#LocalizedStringKey#>, destination: Recommendation())
-// Button {
-//print("Card \(card.title) tapped"); label: do { NavigationLink( destination:Recommendation() ) } }
