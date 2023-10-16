@@ -13,6 +13,8 @@
              
                 NavigationView{
                     ZStack{
+                        Color("BackgroundColor")
+                            .ignoresSafeArea(.all)
                         
                         //Welcome start here
                         Text("مـرحــبــا ! انــا")

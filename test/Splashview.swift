@@ -27,6 +27,8 @@ struct Splashview : View {
         }else {
  
             ZStack{
+                Color("BackgroundColor")
+                    .ignoresSafeArea(.all)
                 
                 VStack{
                     //LOGO START HERE

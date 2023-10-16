@@ -54,7 +54,8 @@ struct ContentsBaseView: View {
                     Image(Content_image).resizable().frame(width: 305.78 , height:293 ).cornerRadius(30).shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)//.offset(y:50)
                         .multilineTextAlignment(.center)
 
-                    Text(Content_title).lineSpacing(1).padding().multilineTextAlignment(.center)
+                Text(Content_title).lineSpacing(1).padding().multilineTextAlignment(.center).bold()
+                    .font(.system(size: 20))
                     Text(Content_description).multilineTextAlignment(.trailing).padding(20)
 
                 

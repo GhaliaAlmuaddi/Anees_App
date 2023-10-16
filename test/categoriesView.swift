@@ -47,6 +47,7 @@ struct categoriesView: View {
                                 let card = Card(imageName: "\(index + 1)",
                                                 title: titles[index] )
                                 CardViewA(selectedMood: mood, card: card)
+                                    .shadow(color: .gray, radius: 3, x: 0, y: 3)
                             } //end foreach
                             
                         }//laze grid
