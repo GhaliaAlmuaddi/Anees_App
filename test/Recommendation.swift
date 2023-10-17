@@ -199,7 +199,7 @@ struct Recommendation: View {
                                 }) {
                                     Image(systemName: "arrow.2.squarepath")
                                         .font(.system(size: 15))
-                                }.navigationTitle(contents?.Category ?? "")
+                                }//.navigationTitle(contents?.Category ?? "")
                             }
                         }
              
