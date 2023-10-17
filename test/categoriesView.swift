@@ -17,7 +17,7 @@ struct categoriesView: View {
     }
     private let adaptiveColumns =
     [
-        GridItem(.adaptive(minimum: 180),spacing: 20)
+        GridItem(.adaptive(minimum: 160)/*,spacing: 20*/)
     ]
     
     private let titles = ["مشروبات", "صوتيات", "كتب", "رياضة"]
@@ -32,19 +32,20 @@ struct categoriesView: View {
             VStack{
                 Spacer()
                 
-                HStack{
+                VStack(alignment:.trailing){
                     Text("أنيس يقترح لك ...")
                         .font(.title).bold()
-                        .multilineTextAlignment(.trailing)
-                        .offset(CGSize(width: 50.0, height: 0.0))
+                        .offset(CGSize(width: 60.0, height: 0.0))
+                        
+                       
                     
-                }.padding(20)
+                }.padding(.top, 40.0)
                 
                 ScrollView
                 {
                     VStack
                     {
-                        LazyVGrid(columns:adaptiveColumns,spacing: 30)
+                        LazyVGrid(columns:adaptiveColumns/*,spacing: 20*/)
                         {
                             ForEach(0..<titles.count, id: \.self)
                             {
@@ -57,7 +58,7 @@ struct categoriesView: View {
                             
                         }//laze grid
                     }//VStack
-                    .padding(.horizontal)
+                    .padding(10)
                 }//Scroll
             }
         }
@@ -85,19 +86,19 @@ struct CardViewA: View {
                     
                     HStack{
                     Text(card.title)
-                    .font(.title)
-                    .foregroundColor(Color("BlueOne"))
+                    .font(.title2)
+                    .foregroundColor(Color("Beige"))
                     }
-                    .frame(width: 220, height: 30)
-                    .background(Color("Beige"))
+                   
                     
                 } //Vstack
                 .frame(width: reader.size.width,height: reader.size.height)
                 .background(Color("BlueOne"))
             }
             
-            .frame(width: 220, height: 350)
+            .frame(height: 280)
             .clipShape(RoundedRectangle(cornerRadius: 19))
+            .padding(8)
             
             
     }//navigation
