@@ -23,8 +23,7 @@ struct Recommendation: View {
         Contents(Content_title: "شاي اليانسون", Content_description:  "اليانسون مفيد جدا في تهدئة الأعصاب، حيث يحتوي على الكثير من الفيتامينات والمعادن؛ ويسهم في السيطرة على معدل ضربات القلب وضغط الدم." , Content_image: "يانسون", Content_link: "https://youtu.be/YRGqTcHdIJs?si=yGiJPoM64zEgQXz7", feeling_type: "angry" , Category : "مشروبات"),
         
         Contents(Content_title: "الشاي الأخضر", Content_description: "يحتوي الشاي الأخضر على مادة الثيانين، والتي تساعد على تحسين المزاج والتقليل من ضربات القلب المرتفعة التي تزيد الشعور بالتوتر.", Content_image: "شاي-اخضر", Content_link: "https://youtube.com/shorts/mFDfijq1LBQ?si=e30qK4Kwq2O4ZIZF", feeling_type: "angry" , Category : "مشروبات"),
-        
-        
+
         
         //MARK: Worry drinks
         
