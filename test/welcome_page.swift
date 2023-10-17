@@ -49,8 +49,7 @@
                         
                         
                         
-                        
-                        
+
                         //Anees
                         Image("Anees1")
                             .renderingMode(.none)
