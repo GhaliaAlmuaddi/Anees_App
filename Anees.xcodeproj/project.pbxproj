@@ -21,7 +21,7 @@
 
 /* Begin PBXFileReference section */
 		0C1318172AD695660085CA02 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		0C209C992ACEB25B00B190AB /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C209C992ACEB25B00B190AB /* Anees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C209C9C2ACEB25B00B190AB /* testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testApp.swift; sourceTree = "<group>"; };
 		0C209C9E2ACEB25B00B190AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0C209CA02ACEB25C00B190AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		0C209C9A2ACEB25B00B190AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0C209C992ACEB25B00B190AB /* test.app */,
+				0C209C992ACEB25B00B190AB /* Anees.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,7 +102,7 @@
 			);
 			name = test;
 			productName = test;
-			productReference = 0C209C992ACEB25B00B190AB /* test.app */;
+			productReference = 0C209C992ACEB25B00B190AB /* Anees.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -294,6 +294,7 @@
 				DEVELOPMENT_TEAM = H34956P8WF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = test/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -305,7 +306,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "hassna.ahmad98-gmail.com";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Anees;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -323,6 +324,7 @@
 				DEVELOPMENT_TEAM = H34956P8WF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = test/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -334,7 +336,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "hassna.ahmad98-gmail.com";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Anees;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
