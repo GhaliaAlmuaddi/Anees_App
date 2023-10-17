@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+
     //MARK: vars
     var angryImg  = "angry"
     var sadImg = "sad"
@@ -23,7 +23,7 @@ struct ContentView: View {
     
     var body: some View {
         //NavigationView {
-        
+
         ZStack{
             Color("BackgroundColor")
                 .ignoresSafeArea(.all)

@@ -36,13 +36,12 @@
                         NavigationLink {
                             ContentView()
                         } label: {
-                            Text("أبدا")
+                            Text("ابدأ")
                             .bold()
                             .frame(width: 180,height: 45)
-                            .background(
-                            RoundedRectangle(cornerRadius: 10,style: .continuous)
-                            .fill(.linearGradient(colors:[Color("blueTwo"), Color("blueTwo")], startPoint: .top, endPoint: .bottomTrailing))
-                                )
+                            .background( Color("BlueOne").opacity(0.4)
+                                .cornerRadius(15)
+  )
                             .foregroundColor(.black) }
                             .padding(.top)
                         .offset(y:110)
