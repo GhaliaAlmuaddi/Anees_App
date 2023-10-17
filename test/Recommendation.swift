@@ -41,7 +41,7 @@ struct Recommendation: View {
         
         Contents(Content_title: "الشاي الأخضر", Content_description: "يعد الشاي الأخضر من الأعشاب التي تعمل على زيادة هرمون السعادة في جسم الإنسان، وخاصة كل من هرمون الدوبامين والسيروتونين.", Content_image: "شاي-اخضر", Content_link: "https://youtube.com/shorts/mFDfijq1LBQ?si=e30qK4Kwq2O4ZIZF", feeling_type: "sad" , Category : "مشروبات"),
         
-        Contents(Content_title: "الميموزا", Content_description: "الميموزا: يعرف هذا النوع من الأعشاب أيضا باسم (المستحية)، وهذه العشبة بالإضافة لكونها توصف كمضاد حيوي، فهي مفيدة جدا للقضاء على مشاعر الاكتئاب والتوتر والحزن.", Content_image: "شاي-اخضر", Content_link: "https://youtube.com/shorts/mFDfijq1LBQ?si=e30qK4Kwq2O4ZIZF", feeling_type: "sad" , Category : "مشروبات"),
+        Contents(Content_title: "الميموزا", Content_description: "الميموزا: يعرف هذا النوع من الأعشاب أيضا باسم (المستحية)، وهذه العشبة بالإضافة لكونها توصف كمضاد حيوي، فهي مفيدة جدا للقضاء على مشاعر الاكتئاب والتوتر والحزن.", Content_image: "ميموزا", Content_link: "https://youtube.com/shorts/mFDfijq1LBQ?si=e30qK4Kwq2O4ZIZF", feeling_type: "sad" , Category : "مشروبات"),
         
         
         
